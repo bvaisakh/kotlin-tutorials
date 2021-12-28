@@ -257,6 +257,7 @@
         <module>parent-boot-2</module>
 
         <module>core-kotlin-modules</module>
+        <module>core-kotlin-companion</module>
         <module>jee-kotlin</module>
         <!-- <module>kotlin-js</module> --> <!-- not a Maven module -->
         <module>kotlin-lambda</module>
@@ -269,11 +270,13 @@
         <module>kotlin-testing</module>
         <module>machine-learning</module>
         <module>spring-boot-kotlin</module>
+        <module>spring-boot-test-kotlin</module>
         <module>spring-mvc-kotlin</module>
         <module>spring-reactive-kotlin</module>
         <module>spring-security-kotlin-dsl</module>
         <module>kotlin-immutable-collections</module>
         <module>kotlin-logging</module>
+        <module>core-kotlin-collections-3</module>
     </modules>
 
     <profiles>
