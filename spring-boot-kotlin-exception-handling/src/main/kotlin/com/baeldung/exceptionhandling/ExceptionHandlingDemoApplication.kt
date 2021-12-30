@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
 
-@SpringBootApplication(scanBasePackages = arrayOf("com.baeldung.exceptionhandling"), exclude = arrayOf(SecurityAutoConfiguration::class))
+@SpringBootApplication(
+    scanBasePackages = ["com.baeldung.exceptionhandling"],
+    exclude = [SecurityAutoConfiguration::class])
 class ExceptionHandlingDemoApplication
 
 fun main(args: Array<String>) {

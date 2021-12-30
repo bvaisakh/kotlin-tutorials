@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap
 @Service
 class ContactService {
     val contacts: ConcurrentHashMap<String, Contact> = ConcurrentHashMap()
-    val contactGroups: ConcurrentHashMap<String, Void?> = ConcurrentHashMap()
+    val contactGroups: ConcurrentHashMap<String, Boolean?> = ConcurrentHashMap()
 
     fun createContact(contact: Contact): Contact {
         checkContactInfoValidity(contact)
@@ -17,7 +17,7 @@ class ContactService {
     }
 
     private fun upsertContactGroup(contactGroup: String) {
-        contactGroups.put(contactGroup, null)
+        contactGroups[contactGroup] = true
     }
 
     private fun checkContactInfoValidity(contact: Contact) {

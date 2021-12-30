@@ -1,8 +1,8 @@
-package com.baeldung.exceptionhandling
+package com.baeldung.exceptionhandling.contact
 
-import com.baeldung.exceptionhandling.contact.Contact
-import org.junit.Test
+import com.baeldung.exceptionhandling.ExceptionHandlingDemoApplication
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
