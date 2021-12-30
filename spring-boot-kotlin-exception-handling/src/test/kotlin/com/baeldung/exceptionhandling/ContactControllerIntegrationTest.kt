@@ -19,7 +19,6 @@ import org.springframework.test.context.junit4.SpringRunner
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
 class ContactControllerIntegrationTest {
-
     @Autowired
     lateinit var testRestTemplate: TestRestTemplate
 
@@ -37,5 +36,4 @@ class ContactControllerIntegrationTest {
         Assertions.assertEquals(HttpStatus.OK, response?.statusCode)
         Assertions.assertEquals(contact, response?.body)
     }
-
 }

@@ -6,13 +6,18 @@ import java.util.concurrent.ConcurrentHashMap
 @Service
 class ContactService {
     val contacts: ConcurrentHashMap<String, Contact> = ConcurrentHashMap()
+    val contactGroups: ConcurrentHashMap<String, Void?> = ConcurrentHashMap()
 
     fun createContact(contact: Contact): Contact {
         checkContactInfoValidity(contact)
         checkForDuplicates(contact)
-        upsertContactGroup(contact.)
+        upsertContactGroup(contact.contactGroup)
 
         return contacts.put(contact.name, contact) ?: throw RuntimeException("Something unforeseen gone wrong")
+    }
+
+    private fun upsertContactGroup(contactGroup: String) {
+        contactGroups.put(contactGroup, null)
     }
 
     private fun checkContactInfoValidity(contact: Contact) {
